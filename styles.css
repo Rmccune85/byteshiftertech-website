@@ -226,5 +226,82 @@ footer {
 #services,
 #about,
 #contact {
+    scroll-margin-top: 60px;
+}
+#pricing {
+    margin: 60px auto 0;
+    padding: 40px 20px;
     scroll-margin-top: 40px;
+}
+
+#pricing h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.pricing-note,
+.parts-note {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #c9d4dd;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.price-card {
+    padding: 24px;
+    background: #111820;
+    border: 1px solid #24313d;
+    border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: #66e0ff;
+}
+
+.price-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.price-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price-card .price {
+    margin: 12px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #66e0ff;
+}
+
+.parts-note {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #pricing h2 {
+        font-size: 30px;
+    }
 }
