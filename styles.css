@@ -1,0 +1,230 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f14;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+.logo {
+    width: 220px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #66e0ff;
+    border-radius: 8px;
+}
+#services {
+    margin-top: 70px;
+    padding: 40px 20px;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 24px;
+    background: #111820;
+    border: 1px solid #24313d;
+    border-radius: 12px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    margin: 0;
+}
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.service-card p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.service-card {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #66e0ff;
+}
+#about {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 40px 20px;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #c9d4dd;
+}
+#contact {
+    margin: 60px auto 0;
+    padding: 50px 20px 180px;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c9d4dd;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 24px;
+    background: rgba(11, 15, 20, 0.95);
+    border-bottom: 1px solid #24313d;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #66e0ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #66e0ff;
+}
+footer {
+    padding: 30px 20px;
+    border-top: 1px solid #24313d;
+    color: #8f9aa3;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+    body {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    #services h2,
+    #about h2,
+    #contact h2 {
+        font-size: 30px;
+    }
+    nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 12px;
+}
+
+.nav-brand {
+    font-size: 16px;
+}
+
+.nav-links a {
+    margin: 0 8px;
+    font-size: 14px;
+}
+}
+.cta-button {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #66e0ff;
+    color: #0b0f14;
+}
+.hero-description {
+    max-width: 650px;
+    margin: 16px auto 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c9d4dd;
+}
+.service-area {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #8f9aa3;
+}
+#services,
+#about,
+#contact {
+    scroll-margin-top: 40px;
+}
