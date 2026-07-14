@@ -305,3 +305,73 @@ footer {
         font-size: 30px;
     }
 }
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 22px;
+    color: #c9d4dd;
+    text-decoration: none;
+    background: #111820;
+    border: 1px solid #24313d;
+    border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #66e0ff;
+}
+
+.contact-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .contact-options {
+        flex-direction: column;
+    }
+}
+.contact-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+.contact-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-card:hover {
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+.contact-card i {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+.contact-card:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
