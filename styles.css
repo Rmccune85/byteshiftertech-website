@@ -43,13 +43,13 @@ p {
     margin-bottom: 30px;
 }
 
-.service-card {
-    max-width: 600px;
-    margin: 0 auto 20px;
+ .service-card {
+    margin: 0;
     padding: 24px;
     background: #111820;
     border: 1px solid #24313d;
     border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 .services-grid {
     display: grid;
@@ -65,19 +65,12 @@ p {
     }
 }
 
-.service-card {
+ .service-card {
     margin: 0;
-}
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 18px;
-}
-
-.service-card p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-.service-card {
+    padding: 24px;
+    background: #111820;
+    border: 1px solid #24313d;
+    border-radius: 12px;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -147,17 +140,6 @@ nav {
 .nav-links a:hover {
     color: #66e0ff;
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 16px;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #66e0ff;
-}
 footer {
     padding: 30px 20px;
     border-top: 1px solid #24313d;
@@ -224,6 +206,7 @@ footer {
     color: #8f9aa3;
 }
 #services,
+#pricing,
 #about,
 #contact {
     scroll-margin-top: 60px;
@@ -231,7 +214,7 @@ footer {
 #pricing {
     margin: 60px auto 0;
     padding: 40px 20px;
-    scroll-margin-top: 40px;
+    
 }
 
 #pricing h2 {
@@ -241,68 +224,131 @@ footer {
 
 .pricing-note,
 .parts-note {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto 30px;
+    color: #c9d4dd;
     font-size: 17px;
     line-height: 1.6;
-    color: #c9d4dd;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    max-width: 1200px;
+.pricing-accordion {
+    max-width: 950px;
     margin: 0 auto 30px;
+    text-align: left;
 }
 
-.price-card {
-    padding: 24px;
+.price-category {
+    margin-bottom: 16px;
+    overflow: hidden;
     background: #111820;
     border: 1px solid #24313d;
     border-radius: 12px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.price-card:hover {
-    transform: translateY(-5px);
-    border-color: #66e0ff;
-}
-
-.price-card h3 {
-    margin-top: 0;
-    font-size: 22px;
-}
-
-.price-card p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.price-card .price {
-    margin: 12px 0;
-    font-size: 28px;
+.price-category summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.price-category summary::-webkit-details-marker {
+    display: none;
+}
+
+.price-category summary::after {
+    content: "+";
+    color: #38bdf8;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.price-category[open] summary::after {
+    content: "−";
+}
+
+.price-category summary:hover {
+    background: #17212b;
     color: #66e0ff;
 }
 
-.parts-note {
-    margin-bottom: 0;
+.summary-price {
+    margin-left: auto;
+    color: #66e0ff;
+    font-size: 22px;
 }
 
-@media (max-width: 1000px) {
-    .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.price-details {
+    padding: 0 24px 24px;
+    color: #c9d4dd;
+    border-top: 1px solid #24313d;
+}
+
+.price-details h3 {
+    margin-top: 24px;
+    color: white;
+    font-size: 18px;
+}
+
+.price-details ul {
+    padding-left: 22px;
+    line-height: 1.8;
+}
+
+.addon-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 0;
+    border-bottom: 1px solid #24313d;
+}
+
+.addon-row strong {
+    color: #66e0ff;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.price-warning {
+    padding: 14px;
+    background: #0b0f14;
+    border-left: 3px solid #66e0ff;
+    border-radius: 6px;
 }
 
 @media (max-width: 600px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
     #pricing h2 {
         font-size: 30px;
+    }
+
+    .price-category summary {
+        padding: 18px 16px;
+        font-size: 17px;
+    }
+
+    .summary-price {
+        font-size: 18px;
+    }
+
+    .price-details {
+        padding: 0 16px 20px;
+    }
+
+    .addon-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .addon-row strong {
+        text-align: left;
+        white-space: normal;
     }
 }
 .contact-options {
@@ -316,6 +362,7 @@ footer {
 .contact-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
     width: 100%;
     padding: 22px;
@@ -324,12 +371,25 @@ footer {
     background: #111820;
     border: 1px solid #24313d;
     border-radius: 12px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
+    color: #38bdf8;
+    transform: translateY(-3px);
     border-color: #66e0ff;
+}
+
+.contact-card:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
 }
 
 .contact-title {
@@ -341,37 +401,11 @@ footer {
 @media (max-width: 600px) {
     .contact-options {
         flex-direction: column;
+        max-width: 320px;
     }
-}
-.contact-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s ease;
-}
 
-.contact-card:hover {
-    color: #38bdf8;
-    transform: translateY(-3px);
-}
-.contact-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.contact-card:hover {
-    color: #38bdf8;
-    transform: translateY(-3px);
-}
-.contact-card i {
-    font-size: 2rem;
-    color: #38bdf8;
-    margin-bottom: 15px;
-}
-.contact-card:focus {
-    outline: 2px solid #38bdf8;
-    outline-offset: 4px;
+    .contact-card {
+        width: auto;
+        padding: 18px 16px;
+    }
 }
