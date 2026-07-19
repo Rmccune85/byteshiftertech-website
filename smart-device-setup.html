@@ -23,16 +23,21 @@
     <span>ByteShifter Technologies</span>
 </a>
 
-        <div class="nav-links">
-            <a href="index.html#home">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#why-choose">Why Choose Us</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#process">Process</a>
-            <a href="index.html#faq">FAQ</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact</a>
-        </div>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#common-problems">Common Problems</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#why-choose">Why Choose Us</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#service-area-details">Service Area</a>
+    <a href="index.html#contact">Contact</a>
+</div>
     </nav>
 
     <main class="service-page">
@@ -374,6 +379,32 @@
     <footer>
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
+
+<script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-links");
+    const navMenuLinks = document.querySelectorAll(".nav-links a");
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            const menuIsOpen = navMenu.classList.toggle("open");
+
+            navToggle.setAttribute("aria-expanded", menuIsOpen);
+
+            navToggle.innerHTML = menuIsOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+    }
+</script>
 
 </body>
 

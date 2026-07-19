@@ -26,5 +26,31 @@
 
 </section>
 
+<script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-links");
+    const navMenuLinks = document.querySelectorAll(".nav-links a");
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            const menuIsOpen = navMenu.classList.toggle("open");
+
+            navToggle.setAttribute("aria-expanded", menuIsOpen);
+
+            navToggle.innerHTML = menuIsOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+    }
+</script>
+
 </body>
 </html>

@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
     <title>Computer Repair, PC Upgrades & Home Networking | ByteShifter Technologies</title>
@@ -100,7 +100,8 @@
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <div class="nav-links">
+    
+<div class="nav-links">
         <a href="#">Home</a>
         <a href="#common-problems">Common Problems</a>
         <a href="#services">Services</a>
@@ -889,54 +890,57 @@
     const navMenu = document.querySelector(".nav-links");
     const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    navToggle.addEventListener("click", () => {
-        const menuIsOpen = navMenu.classList.toggle("open");
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            const menuIsOpen = navMenu.classList.toggle("open");
 
-        navToggle.setAttribute("aria-expanded", menuIsOpen);
+            navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-        navToggle.innerHTML = menuIsOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
-    });
+            navToggle.innerHTML = menuIsOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
 
-    navMenuLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("open");
-            navToggle.setAttribute("aria-expanded", "false");
-            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        navMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+    }
+
+    const sections = document.querySelectorAll("section[id]");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navMenuLinks.forEach(link => {
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" && window.scrollY < 300) {
+                link.classList.add("active");
+            }
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
         });
     });
 </script>
-    <script>
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-links a");
-
-        window.addEventListener("scroll", () => {
-            let current = "";
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 140;
-                const sectionHeight = section.offsetHeight;
-
-                if (window.scrollY >= sectionTop &&
-                    window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === "#" && window.scrollY < 300) {
-                    link.classList.add("active");
-                }
-
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
+    
 </body>
 
 </html>
