@@ -90,24 +90,28 @@
 
 <body>
 
-    <nav>
-        <a href="#" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+   <nav>
+    <a href="#" class="nav-brand">
+        <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+        <span>ByteShifter Technologies</span>
+    </a>
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#common-problems">Common Problems</a>
-            <a href="#services">Services</a>
-            <a href="#why-choose">Why Choose Us</a>
-            <a href="#process">Process</a>
-            <a href="#faq">FAQ</a>
-            <a href="#about">About</a>
-            <a href="#service-area-details">Service Area</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#common-problems">Common Problems</a>
+        <a href="#services">Services</a>
+        <a href="#why-choose">Why Choose Us</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+        <a href="#service-area-details">Service Area</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
     <img src="images/byteshifter-logo.png" alt="ByteShifter Technologies logo" class="logo">
 
@@ -880,7 +884,29 @@
             Serving Trumbull County and Surrounding Areas
         </p>
     </footer>
+<script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-links");
+    const navMenuLinks = document.querySelectorAll(".nav-links a");
 
+    navToggle.addEventListener("click", () => {
+        const menuIsOpen = navMenu.classList.toggle("open");
+
+        navToggle.setAttribute("aria-expanded", menuIsOpen);
+
+        navToggle.innerHTML = menuIsOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    navMenuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+    });
+</script>
     <script>
         const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll(".nav-links a");

@@ -213,17 +213,14 @@ footer p {
     #contact h2 {
         font-size: 30px;
     }
-    nav {
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px 12px;
+   
 }
 
 .nav-brand {
     font-size: 16px;
 }
 
-..nav-links {
+nav-links {
     justify-content: center;
 }
 
@@ -1737,4 +1734,102 @@ footer p {
 
 .nav-brand:hover {
     color: #66e0ff;
+}
+/* Mobile Navigation */
+
+.nav-toggle {
+    display: none;
+    padding: 8px 10px;
+    color: white;
+    font-size: 22px;
+    background: transparent;
+    border: 1px solid #24313d;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: #66e0ff;
+    border-color: #66e0ff;
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 10px 14px;
+    }
+
+    .nav-brand {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .nav-brand span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-toggle {
+        display: block;
+        flex: 0 0 auto;
+        margin-left: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        background: #0f151c;
+        border: 1px solid #24313d;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .nav-links.open {
+        display: grid;
+    }
+
+    .nav-links a {
+        width: 100%;
+        margin: 0;
+        padding: 9px 10px;
+        font-size: 13px;
+        text-align: center;
+        background: #111820;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #66e0ff;
+        background: #17212b;
+    }
+}
+
+@media (max-width: 450px) {
+    .nav-brand span {
+        font-size: 14px;
+    }
+
+    .nav-brand img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-links {
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .nav-links a {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
 }
