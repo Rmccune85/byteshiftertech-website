@@ -1833,3 +1833,30 @@ nav-links {
         font-size: 12px;
     }
 }
+/* Section Reveal Animation */
+
+.page-panel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-ready .page-panel:not(.hero-panel) {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal-ready .page-panel:not(.hero-panel).section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-ready .page-panel:not(.hero-panel) {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
