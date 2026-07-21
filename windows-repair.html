@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <title>Windows Repair & Installation | ByteShifter Technologies</title>
+    <title>Windows Repair & Installation in Trumbull County | ByteShifter Technologies</title>
 
     <meta name="description"
         content="Windows repair, Windows reinstallations, driver installation, updates, activation assistance, and computer troubleshooting throughout Trumbull County and surrounding areas.">
@@ -19,25 +19,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -219,8 +219,8 @@
                 </div>
 
                 <div>
-                    <span>Personal File Backup</span>
-                    <strong>+$25</strong>
+                    <span>Personal File Backup to Customer-Provided Storage</span>
+                    <strong>+$25+</strong>
                 </div>
 
                 <div>
@@ -270,11 +270,12 @@
                 <div class="service-detail-card">
                     <i class="fa-solid fa-lock service-icon"></i>
 
-                    <h3>Passwords and Accounts</h3>
+                    <h3>Account and License Access</h3>
 
                     <p>
-                        You may need your Microsoft account, Windows license,
-                        Wi-Fi password, and software login information.
+                        Microsoft account access, Windows activation information,
+                        Wi-Fi access, or licensed software accounts may be required.
+                        Customers should enter passwords and verification codes themselves.
                     </p>
                 </div>
 
@@ -319,31 +320,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
