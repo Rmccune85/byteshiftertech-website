@@ -7,10 +7,9 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<title>Email & Account Setup in Trumbull County | ByteShifter Technologies</title>
+    <title>Email & Account Setup in Trumbull County | ByteShifter Technologies</title>
     <meta name="description"
         content="Email setup, Microsoft account setup, password assistance, account synchronization, and basic account support throughout Trumbull County and surrounding areas.">
 </head>
@@ -19,25 +18,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -87,10 +86,10 @@
 
                     <h3>Password Assistance</h3>
 
-                   <p>
-    Help is provided with provider-supported password resets,
-    account recovery options, and identity-verification steps.
-</p>
+                    <p>
+                        Help is provided with provider-supported password resets,
+                        account recovery options, and identity-verification steps.
+                    </p>
                 </div>
 
                 <div class="service-detail-card">
@@ -310,11 +309,11 @@
                 No additional work, software purchases, or charges are added without approval.
             </p>
             <p class="parts-note">
-    Account access and password recovery depend on the provider’s verification process.
-    ByteShifter Technologies cannot bypass security requirements or guarantee that an
-    account will be recovered. Service is provided only for the account owner or an
-    authorized representative.
-</p>
+                Account access and password recovery depend on the provider’s verification process.
+                ByteShifter Technologies cannot bypass security requirements or guarantee that an
+                account will be recovered. Service is provided only for the account owner or an
+                authorized representative.
+            </p>
         </section>
 
         <section class="service-page-section">
@@ -328,9 +327,9 @@
                     <h3>Account Information</h3>
 
                     <p>
-    Have the email address, username, and account-provider information available.
-    Customers should be prepared to enter passwords and verification codes themselves.
-</p>
+                        Have the email address, username, and account-provider information available.
+                        Customers should be prepared to enter passwords and verification codes themselves.
+                    </p>
                 </div>
 
                 <div class="service-detail-card">
@@ -386,31 +385,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
