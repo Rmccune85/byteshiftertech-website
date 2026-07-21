@@ -7,11 +7,9 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <title>Data Transfer & Backup | ByteShifter Technologies</title>
-
+    <title>Data Transfer & Backup in Trumbull County | ByteShifter Technologies</title>
     <meta name="description"
         content="Personal file transfer, computer data backup, storage device setup, file organization, and backup verification throughout Trumbull County and surrounding areas.">
 </head>
@@ -20,25 +18,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -49,8 +47,8 @@
             <h1>Data Transfer & Backup</h1>
 
             <p>
-                Transfer personal files between computers or storage devices,
-                create backups, organize folders, and verify important data.
+                Transfer approved files between computers or storage devices,
+                create backups, organize folders, and confirm that important data is accessible.
             </p>
 
             <a href="#request-service" class="cta-button">Request Service</a>
@@ -79,7 +77,7 @@
 
                     <p>
                         Documents, pictures, videos, music,
-                        and other approved personal files are transferred.
+                        and other approved files are transferred between supported devices.
                     </p>
                 </div>
 
@@ -108,12 +106,12 @@
                 <div class="service-detail-card">
                     <i class="fa-solid fa-shield-halved service-icon"></i>
 
-                    <h3>Basic Data Protection</h3>
+                    <h3>Careful File Handling</h3>
 
-                    <p>
-                        Important files are handled carefully,
-                        and the original data is not deleted without approval.
-                    </p>
+<p>
+    Files and storage devices are handled carefully,
+    and original data is not deleted without approval.
+</p>
                 </div>
 
                 <div class="service-detail-card">
@@ -310,6 +308,11 @@
             <p class="parts-note">
                 No additional work, parts, or charges are added without approval.
             </p>
+            <p class="parts-note">
+    Data transfer and backup services do not guarantee recovery of damaged,
+    corrupted, encrypted, or inaccessible files. Specialized data recovery
+    is not included unless specifically quoted and approved.
+</p>
         </section>
 
         <section class="service-page-section">
@@ -381,31 +384,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
