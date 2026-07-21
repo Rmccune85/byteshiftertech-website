@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <title>Computer Hardware Diagnostics | ByteShifter Technologies</title>
+    <title>Computer Hardware Diagnostics in Trumbull County | ByteShifter Technologies</title>
 
     <meta name="description"
         content="Computer hardware diagnostics, component testing, overheating troubleshooting, startup issue diagnosis, and hardware failure testing throughout Trumbull County and surrounding areas.">
@@ -19,25 +19,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -49,7 +49,7 @@
 
             <p>
                 Thorough testing and troubleshooting to identify failed,
-                unstable, overheating, or poorly performing computer hardware.
+                unstable, overheating, or underperforming computer components.
             </p>
 
             <a href="#request-service" class="cta-button">Request Service</a>
@@ -135,11 +135,11 @@
             <div class="service-detail-grid">
 
                 <div class="service-detail-card">
-                    <h3>Computer Will Not Power On</h3>
+                    <h3>Computer Will Not Start Correctly</h3>
 
                     <p>
-                        The computer shows no lights, fans, display,
-                        or other signs of normal startup.
+                        The computer shows no power, starts without a display,
+                        or fails to complete the normal startup process.
                     </p>
                 </div>
 
@@ -248,6 +248,11 @@
             <p class="parts-note">
                 No additional work, parts, or charges are added without approval.
             </p>
+            <p class="parts-note">
+                Diagnostic results are based on the symptoms observed and the tests completed.
+                Intermittent problems may not occur during testing, and failing components may
+                require additional testing before the exact cause can be confirmed.
+            </p>
         </section>
 
         <section class="service-page-section">
@@ -319,31 +324,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
