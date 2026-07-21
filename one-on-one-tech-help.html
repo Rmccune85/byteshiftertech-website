@@ -7,10 +7,9 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <title>One-on-One Tech Help | ByteShifter Technologies</title>
+    <title>One-on-One Tech Help in Trumbull County | ByteShifter Technologies</title>
 
     <meta name="description"
         content="Personal technology help for computers, email, software, online services, devices, and everyday technology throughout Trumbull County and surrounding areas.">
@@ -20,25 +19,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -119,11 +118,11 @@
                 <div class="service-detail-card">
                     <i class="fa-solid fa-list-check service-icon"></i>
 
-                    <h3>Practice and Notes</h3>
+                    <h3>Guided Practice</h3>
 
                     <p>
-                        Important steps can be reviewed,
-                        practiced, and written down for future use.
+                        Important steps are reviewed and practiced
+                        so they are easier to remember and repeat later.
                     </p>
                 </div>
 
@@ -286,8 +285,8 @@
                 </div>
 
                 <div>
-                    <span>Additional Device Help</span>
-                    <strong>+$15 each</strong>
+                    <span>Customized Step-by-Step Reference Guide</span>
+                    <strong>+$15+</strong>
                 </div>
 
                 <div>
@@ -318,13 +317,13 @@
             <div class="service-detail-grid">
 
                 <div class="service-detail-card">
-                    <i class="fa-solid fa-laptop service-icon"></i>
+                    <i class="fa-solid fa-key service-icon"></i>
 
-                    <h3>Bring Your Device</h3>
+                    <h3>Account Access</h3>
 
                     <p>
-                        Have the computer, phone, tablet,
-                        charger, and any related accessories available.
+                        Access to accounts and verification methods may be needed for some topics.
+                        Customers should enter passwords and verification codes themselves.
                     </p>
                 </div>
 
@@ -381,31 +380,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
