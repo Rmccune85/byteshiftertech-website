@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | ByteShifter Technologies</title>
 
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/png" href="/images/byteshifter-icon.png">
 </head>
 
 <body>
 
-<section style="max-width:700px;margin:150px auto;text-align:center;padding:20px;">
+<section style="max-width:700px;margin:40px auto 120px;text-align:center;padding:20px;">
 
     <h1>404</h1>
 
@@ -25,32 +26,6 @@
     </a>
 
 </section>
-
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
-
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
-
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            });
-        });
-    }
-</script>
 
 </body>
 </html>
