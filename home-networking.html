@@ -19,25 +19,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -65,8 +65,7 @@
 
             <div class="service-detail-grid">
 
-                <a href="wifi-router-setup.html"
-                    class="service-detail-card service-card-link">
+                <a href="wifi-router-setup.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-router service-icon"></i>
 
@@ -80,8 +79,7 @@
                     <span class="service-link-text">Learn More →</span>
                 </a>
 
-                <a href="mesh-wifi-setup.html"
-                    class="service-detail-card service-card-link">
+                <a href="mesh-wifi-setup.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-tower-broadcast service-icon"></i>
 
@@ -95,8 +93,7 @@
                     <span class="service-link-text">Learn More →</span>
                 </a>
 
-                <a href="network-troubleshooting.html"
-                    class="service-detail-card service-card-link">
+                <a href="network-troubleshooting.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
 
@@ -110,8 +107,7 @@
                     <span class="service-link-text">Learn More →</span>
                 </a>
 
-                <a href="ethernet-network-setup.html"
-                    class="service-detail-card service-card-link">
+                <a href="ethernet-network-setup.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-network-wired service-icon"></i>
 
@@ -125,8 +121,7 @@
                     <span class="service-link-text">Learn More →</span>
                 </a>
 
-                <a href="network-printer-setup.html"
-                    class="service-detail-card service-card-link">
+                <a href="network-printer-setup.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-print service-icon"></i>
 
@@ -140,8 +135,7 @@
                     <span class="service-link-text">Learn More →</span>
                 </a>
 
-                <a href="smart-device-setup.html"
-                    class="service-detail-card service-card-link">
+                <a href="smart-device-setup.html" class="service-detail-card service-card-link">
 
                     <i class="fa-solid fa-house-signal service-icon"></i>
 
@@ -218,11 +212,11 @@
                 <div class="service-detail-card">
                     <i class="fa-solid fa-key service-icon"></i>
 
-                    <h3>Passwords and Accounts</h3>
+                    <h3>Passwords and Account Access</h3>
 
                     <p>
-                        Router, Wi-Fi, device, email, and application login information
-                        may be required during setup.
+                        Router, Wi-Fi, device, email, or application access may be required.
+                        Customers should be prepared to enter passwords and verification codes themselves.
                     </p>
                 </div>
 
@@ -268,31 +262,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
