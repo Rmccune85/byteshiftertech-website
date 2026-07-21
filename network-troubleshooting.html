@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="images/byteshifter-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <title>Network Troubleshooting | ByteShifter Technologies</title>
+    <title>Network Troubleshooting in Trumbull County | ByteShifter Technologies</title>
 
     <meta name="description"
         content="Home network troubleshooting for slow internet, weak Wi-Fi, dropped connections, device connection problems, and network outages throughout Trumbull County and surrounding areas.">
@@ -19,25 +19,25 @@
 
     <nav>
         <a href="index.html" class="nav-brand">
-    <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
-    <span>ByteShifter Technologies</span>
-</a>
+            <img src="images/byteshifter-icon.png" alt="ByteShifter Technologies icon">
+            <span>ByteShifter Technologies</span>
+        </a>
 
         <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-</button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#common-problems">Common Problems</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#why-choose">Why Choose Us</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#service-area-details">Service Area</a>
-    <a href="index.html#contact">Contact</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#common-problems">Common Problems</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#why-choose">Why Choose Us</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service-area-details">Service Area</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </nav>
 
     <main class="service-page">
@@ -48,7 +48,7 @@
             <h1>Network Troubleshooting</h1>
 
             <p>
-                Diagnosis and repair of slow internet, weak Wi-Fi, dropped connections,
+                Diagnosis and troubleshooting for slow internet, weak Wi-Fi, dropped connections,
                 network outages, and devices that will not connect.
             </p>
 
@@ -233,7 +233,7 @@
                 </div>
 
                 <div>
-                    <span>Ethernet Cable or Port Repair</span>
+                    <span>Ethernet Cable or Port Troubleshooting</span>
                     <strong>+$25+</strong>
                 </div>
 
@@ -255,13 +255,13 @@
             <div class="service-detail-grid">
 
                 <div class="service-detail-card">
-                    <i class="fa-solid fa-building-columns service-icon"></i>
+                    <i class="fa-solid fa-key service-icon"></i>
 
-                    <h3>Internet Provider Information</h3>
+                    <h3>Network Access</h3>
 
                     <p>
-                        Have the provider name, modem information,
-                        and account details available when possible.
+                        Access to the Wi-Fi network, router, and affected devices may be required.
+                        Customers should be prepared to enter passwords themselves.
                     </p>
                 </div>
 
@@ -318,31 +318,31 @@
         <p>© 2024 ByteShifter Technologies. All rights reserved.</p>
     </footer>
 
-<script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    const navMenuLinks = document.querySelectorAll(".nav-links a");
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navMenuLinks = document.querySelectorAll(".nav-links a");
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const menuIsOpen = navMenu.classList.toggle("open");
+        if (navToggle && navMenu) {
+            navToggle.addEventListener("click", () => {
+                const menuIsOpen = navMenu.classList.toggle("open");
 
-            navToggle.setAttribute("aria-expanded", menuIsOpen);
+                navToggle.setAttribute("aria-expanded", menuIsOpen);
 
-            navToggle.innerHTML = menuIsOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-        });
-
-        navMenuLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navToggle.innerHTML = menuIsOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
-        });
-    }
-</script>
+
+            navMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
 
 </body>
 
