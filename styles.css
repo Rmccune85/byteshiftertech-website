@@ -1988,121 +1988,113 @@ nav-links {
         padding: 26px;
     }
 }
-/* All mobile card carousels */
+/* Mobile-only Swiper card carousels */
+
+.mobile-carousel-controls {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
-
-    :is(
-        .services-grid,
-        .problem-grid,
-        .trust-grid,
-        .process-grid,
-        .service-detail-grid,
-        .service-summary-grid,
-        .popular-services-grid,
-        .about-values-grid,
-        .contact-details
-    ) {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        grid-template-columns: none !important;
-        justify-content: flex-start !important;
-
+    .mobile-card-swiper {
         width: 100%;
         max-width: none;
-        gap: 16px;
-
-        margin-left: 0;
-        margin-right: 0;
-        padding: 4px 0 18px;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        overscroll-behavior-inline: contain;
-
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        touch-action: pan-x pan-y;
-        box-sizing: border-box;
+        overflow: hidden;
     }
 
-    :is(
-        .services-grid,
-        .problem-grid,
-        .trust-grid,
-        .process-grid,
-        .service-detail-grid,
-        .service-summary-grid,
-        .popular-services-grid,
-        .about-values-grid,
-        .contact-details
-    )::-webkit-scrollbar {
-        display: none;
+    .mobile-card-swiper .swiper-wrapper {
+        align-items: stretch;
     }
 
-    :is(
-        .services-grid,
-        .problem-grid,
-        .trust-grid,
-        .process-grid,
-        .service-detail-grid,
-        .service-summary-grid,
-        .popular-services-grid,
-        .about-values-grid,
-        .contact-details
-    ) > * {
-        flex: 0 0 calc(100% - 42px) !important;
-        width: calc(100% - 42px) !important;
-        min-width: calc(100% - 42px) !important;
-        max-width: none !important;
-
-        scroll-snap-align: start;
+    .mobile-card-swiper .swiper-slide {
+        height: auto;
         box-sizing: border-box;
     }
 
     .mobile-carousel-controls {
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
-        gap: 14px;
-        margin-top: 8px;
+        gap: 16px;
+        margin-top: 18px;
     }
 
     .mobile-carousel-button {
+        appearance: none;
+        -webkit-appearance: none;
+
         display: inline-flex;
         justify-content: center;
         align-items: center;
 
-        width: 48px;
-        height: 44px;
+        width: 52px;
+        height: 48px;
+        margin: 0;
         padding: 0;
 
-        color: white;
-        font-size: 19px;
+        color: #66e0ff;
+        font-size: 20px;
+        line-height: 1;
+
         background: #111820;
         border: 1px solid #66e0ff;
-        border-radius: 8px;
+        border-radius: 9px;
+
+        box-shadow: none;
         cursor: pointer;
     }
 
-    .mobile-carousel-button:hover {
-        color: #0b0f14;
-        background: #66e0ff;
+    .mobile-carousel-button i {
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-size: 20px;
+        line-height: 1;
     }
 
-    .mobile-carousel-button:disabled {
-        color: #52606b;
-        background: #0f151c;
-        border-color: #24313d;
-        cursor: default;
-        opacity: 0.6;
+    .mobile-carousel-button:hover,
+    .mobile-carousel-button:focus-visible {
+        color: #0b0f14;
+        background: #66e0ff;
     }
 }
 
 @media (min-width: 769px) {
-    .mobile-carousel-controls {
-        display: none;
+    .mobile-carousel-controls,
+    .mobile-carousel-button {
+        display: none !important;
+    }
+}
+/* Uniform Common Problems cards on mobile only */
+@media (max-width: 768px) {
+    .mobile-card-swiper .problem-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 18px !important;
+        text-align: center !important;
+    }
+
+    .mobile-card-swiper .problem-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto;
+        flex: 0 0 64px;
+    }
+
+    .mobile-card-swiper .problem-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mobile-card-swiper .problem-content h3,
+    .mobile-card-swiper .problem-content p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-card-swiper .problem-content span {
+        justify-content: center;
+        margin-top: auto;
     }
 }
